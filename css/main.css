@@ -1,0 +1,153 @@
+/* CUSTOM PROPIRTIES */
+
+:root {
+  --primary: crimson;
+  --body-bg: #F4F6F8;
+}
+
+/* GLOBAL */
+
+*{
+  box-sizing: border-box;
+}
+
+
+/* FOCUS */
+
+*:focus {
+  outline: 3px dashed #000;
+  outline-offset: 3px;
+  transition: 0.4s ease;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--body-bg);
+  color: #000;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* DARK-MODE */
+
+.dark-mode {
+  --body-bg:#000;
+}
+
+
+/* SITE-HEADER */
+
+.site-header {
+  width: 100%;
+  display: flex;
+  padding-top: 45px;
+  padding-bottom: 85px;
+  background: #5964E0;
+  border-radius: 0px 0px 0px 100px;
+  position: relative;
+}
+
+.site-header-bg-img {
+  position: absolute;
+  top: -230px;
+  left: 810px;
+}
+
+.site-header-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo {
+  width: 115px;
+  height: 32px;
+  display: block;
+}
+
+.site-logo-link {
+  flex-shrink: 0;
+  margin-right: 25px;
+}
+
+.site-logo-link:hover {
+  opacity: 0.8;
+}
+
+.site-logo-link:active {
+  opacity: 0.6;
+}
+
+
+/* SWITCH-CONTENT */
+
+.switch-content {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+
+/* SWITCH-CONTROL */
+
+.switch-control {
+  width: 48px;
+  height: 24px;
+  position: relative;
+  padding: 5px;
+  margin-left: 16px;
+  margin-right: 16px;
+  background: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* SWITCH-CIRCLE */
+
+.switch-circle {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background-color: #5964E0;
+  transition: transform 0.3s ease;
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.checkbox:checked + .switch-control .switch-circle {
+  transform: translateX(24px);
+}
+
+.checkbox:checked + .switch-control .switch-circle {
+  background-color: #939BF4;
+}
